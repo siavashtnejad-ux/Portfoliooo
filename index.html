@@ -1168,7 +1168,1277 @@
   <script>
     // ---- Donate Polygon (MetaMask) ----
     // ⚠️ Set this to the wallet address that should receive donations.
-    const DONATE_ADDRESS = "0xYOUR_POLYGON_WALLET_ADDRESS_HERE";
+    const DONATE_ADDRESS = "<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Siavash Torkamannejad — Full Stack Web Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+
+  /* ============================================================
+     TOKENS
+     ============================================================ */
+  :root{
+    --bg:            #0B0F0E;
+    --bg-alt:        #0F1513;
+    --surface:       #131A18;
+    --surface-hi:    #182220;
+    --border:        #253430;
+    --border-soft:   #1B2622;
+    --text:          #E9E7DD;
+    --text-dim:      #8FA098;
+    --text-faint:    #59665F;
+    --accent:        #45B39D;
+    --accent-soft:   rgba(69,179,157,0.12);
+    --accent-line:   rgba(69,179,157,0.35);
+    --warn:          #D98C4A;
+    --crit:          #C1553F;
+    --info:          #5B8FBF;
+
+    --mono: 'IBM Plex Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+    --sans: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+
+    --max: 1080px;
+  }
+
+  *{ box-sizing:border-box; margin:0; padding:0; }
+
+  html{ scroll-behavior:smooth; }
+
+  @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior:auto; }
+    *{ animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important; }
+  }
+
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:var(--sans);
+    font-size:16px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    background-image:
+      linear-gradient(var(--border-soft) 1px, transparent 1px),
+      linear-gradient(90deg, var(--border-soft) 1px, transparent 1px);
+    background-size: 44px 44px;
+    background-position: center top;
+  }
+
+  a{ color:inherit; text-decoration:none; }
+
+  ::selection{ background:var(--accent-soft); color:var(--text); }
+
+  :focus-visible{
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+  }
+
+  .wrap{
+    max-width:var(--max);
+    margin:0 auto;
+    padding:0 28px;
+  }
+
+  .mono{ font-family:var(--mono); }
+
+  .eyebrow{
+    font-family:var(--mono);
+    font-size:12px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--accent);
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:18px;
+  }
+  .eyebrow::before{
+    content:"";
+    width:8px; height:8px;
+    background:var(--accent);
+    box-shadow:0 0 0 3px var(--accent-soft);
+  }
+
+  h1,h2,h3{
+    font-family:var(--mono);
+    font-weight:600;
+    letter-spacing:-0.01em;
+    color:var(--text);
+  }
+
+  /* ============================================================
+     NAV
+     ============================================================ */
+  header.site{
+    position:sticky; top:0; z-index:50;
+    background:rgba(11,15,14,0.86);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--border);
+  }
+  header.site .wrap{
+    display:flex; align-items:center; justify-content:space-between;
+    height:64px;
+  }
+  .brand{
+    font-family:var(--mono);
+    font-size:14px;
+    color:var(--text);
+    display:flex; align-items:center; gap:8px;
+  }
+  .brand .prompt{ color:var(--accent); }
+  .brand .cursor{
+    display:inline-block; width:8px; height:15px; background:var(--accent);
+    animation:blink 1.1s steps(1) infinite;
+  }
+  @keyframes blink{ 50%{ opacity:0; } }
+
+  .brand-command{
+    color:var(--text-dim);
+    margin-left:2px;
+  }
+
+  nav.primary{ display:flex; gap:28px; }
+  nav.primary a{
+    font-family:var(--mono);
+    font-size:12.5px;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    color:var(--text-dim);
+    position:relative;
+    padding:4px 0;
+    transition:color .15s ease;
+  }
+  nav.primary a:hover{ color:var(--text); }
+  nav.primary a::after{
+    content:""; position:absolute; left:0; bottom:0;
+    width:0%; height:1px; background:var(--accent);
+    transition:width .18s ease;
+  }
+  nav.primary a:hover::after{ width:100%; }
+
+  .nav-toggle{ display:none; }
+
+  /* ============================================================
+     TOP BANNER — pixel art
+     ============================================================ */
+  .top-banner{
+    position:relative;
+    background:#05070A;
+    border-bottom:1px solid var(--border);
+    overflow:hidden;
+    height:220px;
+    display:flex;
+    align-items:flex-end;
+    justify-content:center;
+  }
+  .top-banner svg{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    display:block;
+  }
+  .top-banner p{
+    position:relative;
+    z-index:2;
+    font-family:var(--mono);
+    font-size:11.5px;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    color:var(--text);
+    background:rgba(5,7,9,0.55);
+    padding:7px 18px;
+    margin-bottom:14px;
+    border-radius:3px;
+    backdrop-filter:blur(2px);
+  }
+
+  .star-twinkle{ animation:twinkle 3.2s ease-in-out infinite; }
+  .star-twinkle.s2{ animation-delay:0.9s; animation-duration:2.6s; }
+  .star-twinkle.s3{ animation-delay:1.7s; animation-duration:3.8s; }
+  @keyframes twinkle{
+    0%, 100%{ opacity:0.25; }
+    50%{ opacity:1; }
+  }
+
+  @media (max-width:680px){
+    .top-banner{ height:150px; }
+    .top-banner p{ font-size:10px; padding:6px 12px; margin-bottom:10px; }
+  }
+
+  /* ============================================================
+     HERO — "executive summary" terminal boot
+     ============================================================ */
+  .hero{
+    padding:96px 0 88px;
+    border-bottom:1px solid var(--border);
+    position:relative;
+    overflow:hidden;
+  }
+
+  .term{
+    max-width:640px;
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:6px;
+    box-shadow:0 30px 60px -30px rgba(0,0,0,0.6);
+    margin-bottom:40px;
+  }
+  .term-bar{
+    display:flex; align-items:center; gap:8px;
+    padding:10px 14px;
+    border-bottom:1px solid var(--border);
+    background:var(--surface-hi);
+    border-radius:6px 6px 0 0;
+  }
+  .term-dot{ width:9px; height:9px; border-radius:50%; background:var(--border); }
+  .term-bar .term-title{
+    margin-left:8px; font-family:var(--mono); font-size:11.5px; color:var(--text-faint);
+    letter-spacing:0.04em;
+  }
+  .term-body{
+    padding:18px 18px 20px;
+    font-family:var(--mono);
+    font-size:13px;
+    color:var(--text-dim);
+    min-height:132px;
+  }
+  .term-body .line{ white-space:pre; opacity:0; }
+  .term-body .ok{ color:var(--accent); }
+  .term-line-cursor{
+    display:inline-block; width:7px; height:13px; background:var(--accent);
+    vertical-align:-2px; animation:blink 1s steps(1) infinite;
+  }
+
+  .hero h1{
+    font-size:clamp(34px, 5.4vw, 56px);
+    line-height:1.05;
+    margin-bottom:18px;
+  }
+  .hero h1 .accent{ color:var(--accent); }
+
+  .hero .role{
+    font-family:var(--sans);
+    font-size:19px;
+    color:var(--text-dim);
+    max-width:560px;
+    margin-bottom:34px;
+  }
+
+  .hero-actions{ display:flex; gap:14px; flex-wrap:wrap; margin-bottom:44px; }
+
+  .btn{
+    font-family:var(--mono);
+    font-size:12.5px;
+    letter-spacing:0.05em;
+    text-transform:uppercase;
+    padding:13px 22px;
+    border-radius:4px;
+    display:inline-flex; align-items:center; gap:8px;
+    transition:transform .15s ease, background .15s ease, border-color .15s ease;
+    border:1px solid transparent;
+  }
+  .btn:hover{ transform:translateY(-1px); }
+  .btn-primary{ background:var(--accent); color:#08110F; }
+  .btn-primary:hover{ background:#57C4AE; }
+  .btn-outline{ border-color:var(--border); color:var(--text); }
+  .btn-outline:hover{ border-color:var(--accent-line); color:var(--accent); }
+
+  .hero-meta{
+    display:grid;
+    grid-template-columns:repeat(3, minmax(0,1fr));
+    gap:1px;
+    background:var(--border);
+    border:1px solid var(--border);
+    max-width:640px;
+  }
+  .hero-meta div{
+    background:var(--bg-alt);
+    padding:14px 16px;
+  }
+  .hero-meta .k{
+    font-family:var(--mono); font-size:10.5px; letter-spacing:0.08em;
+    text-transform:uppercase; color:var(--text-faint); margin-bottom:6px;
+  }
+  .hero-meta .v{ font-family:var(--mono); font-size:13.5px; color:var(--text); }
+
+  /* ============================================================
+     SECTION shell
+     ============================================================ */
+  section{ padding:88px 0; border-bottom:1px solid var(--border); }
+  section:last-of-type{ border-bottom:none; }
+
+  .section-head{
+    display:flex; align-items:flex-end; justify-content:space-between;
+    gap:24px; margin-bottom:44px; flex-wrap:wrap;
+  }
+  .section-head h2{ font-size:28px; }
+  .section-head p{ color:var(--text-dim); max-width:440px; font-size:14.5px; }
+
+  /* ============================================================
+     ABOUT
+     ============================================================ */
+  .about-grid{
+    display:grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap:56px;
+  }
+  .about-body p{ color:var(--text-dim); margin-bottom:16px; font-size:15.5px; }
+  .about-body p:last-child{ margin-bottom:0; }
+  .about-body strong{ color:var(--text); font-weight:600; }
+
+  .field-list{ display:flex; flex-direction:column; gap:0; }
+  .field-list .field{
+    display:flex; justify-content:space-between; gap:16px;
+    padding:14px 0;
+    border-bottom:1px solid var(--border-soft);
+    font-size:13.5px;
+  }
+  .field-list .field:first-child{ padding-top:0; }
+  .field-list .field span:first-child{
+    font-family:var(--mono); color:var(--text-faint); text-transform:uppercase; letter-spacing:0.06em; font-size:11px;
+  }
+  .field-list .field span:last-child{ color:var(--text); text-align:right; }
+
+  /* ============================================================
+     PROFESSIONAL SUMMARY
+     ============================================================ */
+  .summary-body p{ color:var(--text-dim); font-size:15.5px; margin-bottom:22px; max-width:760px; }
+  .summary-body p strong{ color:var(--text); font-weight:600; }
+
+  .summary-list{ display:flex; flex-direction:column; gap:16px; margin-bottom:28px; }
+  .summary-list li{
+    display:flex; gap:12px; align-items:flex-start;
+    font-size:14.5px; color:var(--text-dim); max-width:760px;
+  }
+  .summary-list li::before{
+    content:"▸"; color:var(--accent); font-family:var(--mono); font-size:13px;
+    flex-shrink:0; margin-top:2px;
+  }
+  .summary-list li strong{ color:var(--text); font-weight:600; }
+
+  .summary-callout{
+    border:1px solid var(--border); border-left:2px solid var(--accent);
+    border-radius:4px; padding:20px 24px;
+    background:var(--surface);
+    font-size:14px; color:var(--text-dim); max-width:760px;
+    margin-bottom:16px;
+  }
+  .summary-callout strong{ color:var(--text); font-weight:600; }
+  .summary-callout .label{
+    display:block; font-family:var(--mono); font-size:10.5px; letter-spacing:0.08em;
+    text-transform:uppercase; color:var(--accent); margin-bottom:8px;
+  }
+
+  /* ============================================================
+     FINDINGS / SKILLS
+     ============================================================ */
+  .findings{ display:flex; flex-direction:column; border:1px solid var(--border); }
+  .finding{
+    display:grid;
+    grid-template-columns: 120px 200px 1fr;
+    gap:20px;
+    align-items:center;
+    padding:20px 22px;
+    border-bottom:1px solid var(--border);
+    transition:background .15s ease;
+  }
+  .finding:last-child{ border-bottom:none; }
+  .finding:hover{ background:var(--surface); }
+
+  .sev{
+    font-family:var(--mono); font-size:11px; font-weight:600;
+    letter-spacing:0.06em;
+    padding:5px 9px;
+    border-radius:3px;
+    width:fit-content;
+    border:1px solid transparent;
+  }
+  .sev-critical{ color:var(--crit); background:rgba(193,85,63,0.1); border-color:rgba(193,85,63,0.3); }
+  .sev-high{ color:var(--warn); background:rgba(217,140,74,0.1); border-color:rgba(217,140,74,0.3); }
+  .sev-medium{ color:var(--info); background:rgba(91,143,191,0.1); border-color:rgba(91,143,191,0.3); }
+  .sev-low{ color:var(--text-dim); background:rgba(143,160,152,0.08); border-color:var(--border); }
+
+  .finding .cat{ font-family:var(--mono); font-size:14.5px; color:var(--text); }
+  .finding .desc{ font-size:13.5px; color:var(--text-dim); }
+  .finding .desc .tool{
+    color:var(--text); background:var(--bg-alt); border:1px solid var(--border-soft);
+    padding:1px 6px; border-radius:3px; font-family:var(--mono); font-size:12px; margin:0 2px;
+  }
+
+  .findings-legend{
+    display:flex; gap:22px; margin-top:18px; flex-wrap:wrap;
+  }
+  .findings-legend .item{
+    display:flex; align-items:center; gap:7px;
+    font-family:var(--mono); font-size:11px; color:var(--text-faint); letter-spacing:0.04em;
+  }
+  .findings-legend .dot{ width:7px; height:7px; border-radius:50%; }
+
+  /* ============================================================
+     PROJECTS / ENGAGEMENT LOG
+     ============================================================ */
+  .log{ display:flex; flex-direction:column; gap:18px; }
+  .log-entry{
+    border:1px solid var(--border);
+    background:var(--surface);
+    border-radius:6px;
+    padding:26px 28px;
+    transition:border-color .15s ease, transform .15s ease;
+  }
+  .log-entry:hover{ border-color:var(--accent-line); transform:translateY(-2px); }
+
+  .log-head{
+    display:flex; justify-content:space-between; align-items:flex-start; gap:20px;
+    margin-bottom:12px; flex-wrap:wrap;
+  }
+  .log-id{ font-family:var(--mono); font-size:11.5px; color:var(--text-faint); letter-spacing:0.04em; }
+  .log-status{
+    font-family:var(--mono); font-size:10.5px; letter-spacing:0.06em; text-transform:uppercase;
+    padding:3px 8px; border-radius:3px; color:var(--accent); background:var(--accent-soft);
+    white-space:nowrap;
+  }
+  .log-entry h3{ font-size:19px; margin-bottom:10px; }
+  .log-entry p{ color:var(--text-dim); font-size:14.5px; margin-bottom:18px; max-width:640px; }
+
+  .tags{ display:flex; gap:8px; flex-wrap:wrap; margin-bottom:18px; }
+  .tag{
+    font-family:var(--mono); font-size:11px; color:var(--text-dim);
+    border:1px solid var(--border); padding:4px 9px; border-radius:3px;
+  }
+
+  .log-links{ display:flex; gap:20px; }
+  .log-links a{
+    font-family:var(--mono); font-size:12px; color:var(--accent);
+    display:flex; align-items:center; gap:6px;
+    letter-spacing:0.03em;
+  }
+  .log-links a::after{ content:"→"; transition:transform .15s ease; }
+  .log-links a:hover::after{ transform:translateX(3px); }
+
+  /* ============================================================
+     CERTIFICATIONS
+     ============================================================ */
+  .certs{
+    display:grid;
+    grid-template-columns:repeat(auto-fill, minmax(230px, 1fr));
+    gap:14px;
+  }
+  .cert{
+    border:1px solid var(--border);
+    padding:20px;
+    border-radius:6px;
+    display:flex; flex-direction:column; gap:6px;
+  }
+  .cert .name{ font-family:var(--mono); font-size:14.5px; color:var(--text); }
+  .cert .issuer{ font-size:12.5px; color:var(--text-dim); }
+  .cert .date{ font-family:var(--mono); font-size:11px; color:var(--text-faint); margin-top:4px; }
+
+  /* ============================================================
+     CONTACT
+     ============================================================ */
+  .contact-panel{
+    border:1px solid var(--border);
+    border-radius:8px;
+    padding:52px;
+    background:
+      radial-gradient(circle at 12% 20%, var(--accent-soft), transparent 45%),
+      var(--surface);
+    text-align:center;
+  }
+  .contact-panel h2{ font-size:30px; margin-bottom:14px; }
+  .contact-panel p{ color:var(--text-dim); max-width:460px; margin:0 auto 32px; font-size:15px; }
+
+  .contact-actions{ display:flex; gap:14px; justify-content:center; flex-wrap:wrap; margin-bottom:36px; }
+
+  .donate-panel{
+    max-width:380px;
+    margin:0 auto 8px;
+    border:1px solid var(--border);
+    border-radius:6px;
+    padding:18px 20px;
+    background:var(--bg-alt);
+    text-align:left;
+  }
+  .donate-row{
+    display:flex; justify-content:space-between; align-items:center;
+    padding:7px 0;
+    border-bottom:1px solid var(--border-soft);
+    font-size:13px;
+  }
+  .donate-row:last-of-type{ border-bottom:none; }
+  .donate-label{
+    font-family:var(--mono); font-size:10.5px; letter-spacing:0.06em;
+    text-transform:uppercase; color:var(--text-faint);
+  }
+  .donate-value{ color:var(--text); font-size:13px; }
+  .donate-value.mono{ font-family:var(--mono); font-size:12px; }
+  .donate-controls{ display:flex; gap:10px; margin-top:14px; }
+  .donate-input{
+    flex:1; min-width:0;
+    background:var(--surface); border:1px solid var(--border); border-radius:4px;
+    color:var(--text); font-family:var(--mono); font-size:13px;
+    padding:11px 12px;
+  }
+  .donate-input:focus{ outline:2px solid var(--accent); outline-offset:1px; }
+  .donate-note{
+    font-family:var(--mono); font-size:10.5px; color:var(--text-faint);
+    margin-top:12px; text-align:center;
+  }
+  .donate-note.error{ color:var(--crit); }
+  .donate-note.success{ color:var(--accent); }
+
+  @media (max-width:480px){
+    .donate-controls{ flex-direction:column; }
+  }
+
+  .channels{ display:flex; gap:26px; justify-content:center; flex-wrap:wrap; }
+  .channels a{
+    font-family:var(--mono); font-size:12.5px; color:var(--text-dim);
+    display:flex; align-items:center; gap:8px; transition:color .15s ease;
+  }
+  .channels a:hover{ color:var(--accent); }
+  .channels .bracket{ color:var(--text-faint); }
+
+  /* ============================================================
+     FOOTER
+     ============================================================ */
+  footer{
+    padding:28px 0;
+  }
+  footer .wrap{
+    display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;
+  }
+  footer p{ font-family:var(--mono); font-size:11.5px; color:var(--text-faint); }
+
+  /* ============================================================
+     REVEAL ON SCROLL
+     ============================================================ */
+  .reveal{ opacity:0; transform:translateY(14px); transition:opacity .5s ease, transform .5s ease; }
+  .reveal.in{ opacity:1; transform:translateY(0); }
+
+  /* ============================================================
+     RESPONSIVE
+     ============================================================ */
+  @media (max-width: 860px){
+    .about-grid{ grid-template-columns:1fr; gap:36px; }
+    .finding{ grid-template-columns:1fr; gap:8px; }
+    .hero-meta{ grid-template-columns:1fr; }
+    .contact-panel{ padding:36px 22px; }
+  }
+
+  @media (max-width: 680px){
+    nav.primary{
+      position:fixed; inset:64px 0 0 0; height:calc(100vh - 64px);
+      background:var(--bg); flex-direction:column; padding:36px 28px;
+      transform:translateX(100%); transition:transform .25s ease;
+    }
+    nav.primary.open{ transform:translateX(0); }
+    nav.primary a{ font-size:15px; padding:14px 0; border-bottom:1px solid var(--border-soft); }
+    .nav-toggle{
+      display:flex; flex-direction:column; gap:4px; background:none; border:none; cursor:pointer; padding:8px;
+    }
+    .nav-toggle span{ width:20px; height:2px; background:var(--text); }
+    .brand-command{ display:none; }
+    .hero{ padding:64px 0 56px; }
+    section{ padding:64px 0; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="top-banner">
+      <svg viewBox="0 0 64 26" preserveAspectRatio="xMidYMid slice" shape-rendering="crispEdges" aria-hidden="true">
+        <defs>
+          <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#05070A"/>
+            <stop offset="60%" stop-color="#0A1614"/>
+            <stop offset="100%" stop-color="#11201B"/>
+          </linearGradient>
+          <radialGradient id="auraGlow" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#45B39D" stop-opacity="0.35"/>
+            <stop offset="100%" stop-color="#45B39D" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+        <rect x="0" y="0" width="64" height="26" fill="url(#skyGrad)"/>
+        <ellipse cx="31.5" cy="15" rx="13" ry="11" fill="url(#auraGlow)"/>
+<rect x="7" y="2" width="1" height="1" fill="#EDEAE0" fill-opacity="0.95"/>
+            <rect x="8" y="2" width="1" height="1" fill="#EDEAE0" fill-opacity="0.95"/>
+            <rect x="9" y="2" width="1" height="1" fill="#EDEAE0" fill-opacity="0.95"/>
+            <rect x="6" y="3" width="1" height="1" fill="#EDEAE0" fill-opacity="0.95"/>
+            <rect x="7" y="3" width="1" height="1" fill="#EDEAE0" fill-opacity="0.95"/>
+            <rect x="8" y="3" width="1" height="1" fill="#EDEAE0" fill-opacity="0.95"/>
+            <rect x="9" y="3" width="1" height="1" fill="#EDEAE0" fill-opacity="0.95"/>
+            <rect x="10" y="3" width="1" height="1" fill="#EDEAE0" fill-opacity="0.95"/>
+            <rect x="6" y="4" width="1" height="1" fill="#EDEAE0" fill-opacity="0.95"/>
+            <rect x="7" y="4" width="1" height="1" fill="#EDEAE0" fill-opacity="0.95"/>
+            <rect x="8" y="4" width="1" height="1" fill="#EDEAE0" fill-opacity="0.95"/>
+            <rect x="9" y="4" width="1" height="1" fill="#EDEAE0" fill-opacity="0.95"/>
+            <rect x="10" y="4" width="1" height="1" fill="#EDEAE0" fill-opacity="0.95"/>
+            <rect x="6" y="5" width="1" height="1" fill="#EDEAE0" fill-opacity="0.95"/>
+            <rect x="7" y="5" width="1" height="1" fill="#EDEAE0" fill-opacity="0.95"/>
+            <rect x="8" y="5" width="1" height="1" fill="#EDEAE0" fill-opacity="0.95"/>
+            <rect x="9" y="5" width="1" height="1" fill="#EDEAE0" fill-opacity="0.95"/>
+            <rect x="10" y="5" width="1" height="1" fill="#EDEAE0" fill-opacity="0.95"/>
+            <rect x="7" y="6" width="1" height="1" fill="#EDEAE0" fill-opacity="0.95"/>
+            <rect x="8" y="6" width="1" height="1" fill="#EDEAE0" fill-opacity="0.95"/>
+            <rect x="9" y="6" width="1" height="1" fill="#EDEAE0" fill-opacity="0.95"/>
+            <rect x="41" y="4" width="1" height="1" fill="#E9E7DD" fill-opacity="0.37"/>
+            <rect x="12" y="11" width="1" height="1" fill="#E9E7DD" fill-opacity="0.71"/>
+            <rect x="27" y="1" width="1" height="1" fill="#E9E7DD" class="star-twinkle s2"/>
+            <rect x="53" y="2" width="1" height="1" fill="#E9E7DD" fill-opacity="0.57"/>
+            <rect x="7" y="18" width="1" height="1" fill="#E9E7DD" class="star-twinkle s3"/>
+            <rect x="50" y="1" width="1" height="1" fill="#E9E7DD" fill-opacity="0.37"/>
+            <rect x="17" y="9" width="1" height="1" fill="#E9E7DD" fill-opacity="0.57"/>
+            <rect x="39" y="17" width="1" height="1" fill="#E9E7DD" fill-opacity="0.42"/>
+            <rect x="24" y="11" width="1" height="1" fill="#E9E7DD" class="star-twinkle s1"/>
+            <rect x="8" y="18" width="1" height="1" fill="#45B39D" fill-opacity="0.76" class="star-twinkle s2"/>
+            <rect x="54" y="10" width="1" height="1" fill="#E9E7DD" fill-opacity="0.72"/>
+            <rect x="46" y="9" width="1" height="1" fill="#E9E7DD" fill-opacity="0.42"/>
+            <rect x="31" y="2" width="1" height="1" fill="#E9E7DD" fill-opacity="0.56"/>
+            <rect x="43" y="14" width="1" height="1" fill="#E9E7DD" fill-opacity="0.74"/>
+            <rect x="15" y="16" width="1" height="1" fill="#E9E7DD" fill-opacity="0.65"/>
+            <rect x="19" y="15" width="1" height="1" fill="#E9E7DD" fill-opacity="0.73"/>
+            <rect x="9" y="17" width="1" height="1" fill="#E9E7DD" fill-opacity="0.7"/>
+            <rect x="40" y="10" width="1" height="1" fill="#E9E7DD" fill-opacity="0.59"/>
+            <rect x="58" y="2" width="1" height="1" fill="#E9E7DD" fill-opacity="0.73"/>
+            <rect x="60" y="22" width="1" height="1" fill="#E9E7DD" fill-opacity="0.37"/>
+            <rect x="39" y="20" width="1" height="1" fill="#E9E7DD" fill-opacity="0.62"/>
+            <rect x="57" y="9" width="1" height="1" fill="#E9E7DD" fill-opacity="0.7"/>
+            <rect x="44" y="0" width="1" height="1" fill="#E9E7DD" fill-opacity="0.49"/>
+            <rect x="14" y="15" width="1" height="1" fill="#45B39D" fill-opacity="0.93" class="star-twinkle s3"/>
+            <rect x="16" y="7" width="1" height="1" fill="#E9E7DD" fill-opacity="0.72"/>
+            <rect x="63" y="2" width="1" height="1" fill="#E9E7DD" class="star-twinkle s1"/>
+            <rect x="51" y="17" width="1" height="1" fill="#E9E7DD" fill-opacity="0.4"/>
+            <rect x="55" y="17" width="1" height="1" fill="#E9E7DD" fill-opacity="0.52"/>
+            <rect x="45" y="21" width="1" height="1" fill="#E9E7DD" fill-opacity="0.73"/>
+            <rect x="19" y="2" width="1" height="1" fill="#E9E7DD" class="star-twinkle s2"/>
+            <rect x="29" y="0" width="1" height="1" fill="#E9E7DD" fill-opacity="0.59"/>
+            <rect x="33" y="9" width="1" height="1" fill="#45B39D" fill-opacity="0.83" class="star-twinkle s3"/>
+            <rect x="47" y="19" width="1" height="1" fill="#E9E7DD" fill-opacity="0.73"/>
+            <rect x="6" y="14" width="1" height="1" fill="#E9E7DD" fill-opacity="0.66"/>
+            <rect x="50" y="12" width="1" height="1" fill="#E9E7DD" fill-opacity="0.39"/>
+            <rect x="51" y="1" width="1" height="1" fill="#E9E7DD" class="star-twinkle s1"/>
+            <rect x="26" y="14" width="1" height="1" fill="#E9E7DD" class="star-twinkle s2"/>
+            <rect x="43" y="19" width="1" height="1" fill="#45B39D" fill-opacity="0.7" class="star-twinkle s3"/>
+            <rect x="19" y="17" width="1" height="1" fill="#E9E7DD" class="star-twinkle s1"/>
+            <rect x="46" y="19" width="1" height="1" fill="#45B39D" fill-opacity="0.96" class="star-twinkle s2"/>
+            <rect x="48" y="4" width="1" height="1" fill="#E9E7DD" fill-opacity="0.73"/>
+            <rect x="46" y="15" width="1" height="1" fill="#E9E7DD" class="star-twinkle s3"/>
+            <rect x="62" y="14" width="1" height="1" fill="#E9E7DD" fill-opacity="0.47"/>
+            <rect x="18" y="3" width="1" height="1" fill="#E9E7DD" fill-opacity="0.65"/>
+            <rect x="61" y="22" width="1" height="1" fill="#E9E7DD" class="star-twinkle s1"/>
+            <rect x="2" y="6" width="1" height="1" fill="#E9E7DD" fill-opacity="0.56"/>
+            <rect x="30" y="9" width="1" height="1" fill="#D98C4A"/>
+            <rect x="31" y="9" width="1" height="1" fill="#D98C4A"/>
+            <rect x="32" y="9" width="1" height="1" fill="#D98C4A"/>
+            <rect x="29" y="10" width="1" height="1" fill="#D98C4A"/>
+            <rect x="30" y="10" width="1" height="1" fill="#D98C4A"/>
+            <rect x="31" y="10" width="1" height="1" fill="#D98C4A"/>
+            <rect x="32" y="10" width="1" height="1" fill="#D98C4A"/>
+            <rect x="33" y="10" width="1" height="1" fill="#D98C4A"/>
+            <rect x="29" y="11" width="1" height="1" fill="#D98C4A"/>
+            <rect x="30" y="11" width="1" height="1" fill="#D98C4A"/>
+            <rect x="31" y="11" width="1" height="1" fill="#D98C4A"/>
+            <rect x="32" y="11" width="1" height="1" fill="#D98C4A"/>
+            <rect x="33" y="11" width="1" height="1" fill="#D98C4A"/>
+            <rect x="29" y="12" width="1" height="1" fill="#D98C4A"/>
+            <rect x="30" y="12" width="1" height="1" fill="#D98C4A"/>
+            <rect x="31" y="12" width="1" height="1" fill="#D98C4A"/>
+            <rect x="32" y="12" width="1" height="1" fill="#D98C4A"/>
+            <rect x="33" y="12" width="1" height="1" fill="#D98C4A"/>
+            <rect x="30" y="13" width="1" height="1" fill="#D98C4A"/>
+            <rect x="31" y="13" width="1" height="1" fill="#D98C4A"/>
+            <rect x="32" y="13" width="1" height="1" fill="#D98C4A"/>
+            <rect x="28" y="14" width="1" height="1" fill="#D98C4A"/>
+            <rect x="29" y="14" width="1" height="1" fill="#D98C4A"/>
+            <rect x="30" y="14" width="1" height="1" fill="#D98C4A"/>
+            <rect x="31" y="14" width="1" height="1" fill="#D98C4A"/>
+            <rect x="32" y="14" width="1" height="1" fill="#D98C4A"/>
+            <rect x="33" y="14" width="1" height="1" fill="#D98C4A"/>
+            <rect x="34" y="14" width="1" height="1" fill="#D98C4A"/>
+            <rect x="27" y="15" width="1" height="1" fill="#D98C4A"/>
+            <rect x="28" y="15" width="1" height="1" fill="#D98C4A"/>
+            <rect x="29" y="15" width="1" height="1" fill="#D98C4A"/>
+            <rect x="30" y="15" width="1" height="1" fill="#D98C4A"/>
+            <rect x="31" y="15" width="1" height="1" fill="#D98C4A"/>
+            <rect x="32" y="15" width="1" height="1" fill="#D98C4A"/>
+            <rect x="33" y="15" width="1" height="1" fill="#D98C4A"/>
+            <rect x="34" y="15" width="1" height="1" fill="#D98C4A"/>
+            <rect x="35" y="15" width="1" height="1" fill="#D98C4A"/>
+            <rect x="26" y="16" width="1" height="1" fill="#D98C4A"/>
+            <rect x="27" y="16" width="1" height="1" fill="#D98C4A"/>
+            <rect x="30" y="16" width="1" height="1" fill="#D98C4A"/>
+            <rect x="31" y="16" width="1" height="1" fill="#D98C4A"/>
+            <rect x="32" y="16" width="1" height="1" fill="#D98C4A"/>
+            <rect x="35" y="16" width="1" height="1" fill="#D98C4A"/>
+            <rect x="36" y="16" width="1" height="1" fill="#D98C4A"/>
+            <rect x="26" y="17" width="1" height="1" fill="#D98C4A"/>
+            <rect x="27" y="17" width="1" height="1" fill="#D98C4A"/>
+            <rect x="29" y="17" width="1" height="1" fill="#D98C4A"/>
+            <rect x="30" y="17" width="1" height="1" fill="#D98C4A"/>
+            <rect x="31" y="17" width="1" height="1" fill="#D98C4A"/>
+            <rect x="32" y="17" width="1" height="1" fill="#D98C4A"/>
+            <rect x="33" y="17" width="1" height="1" fill="#D98C4A"/>
+            <rect x="35" y="17" width="1" height="1" fill="#D98C4A"/>
+            <rect x="36" y="17" width="1" height="1" fill="#D98C4A"/>
+            <rect x="26" y="18" width="1" height="1" fill="#D98C4A"/>
+            <rect x="27" y="18" width="1" height="1" fill="#D98C4A"/>
+            <rect x="28" y="18" width="1" height="1" fill="#D98C4A"/>
+            <rect x="29" y="18" width="1" height="1" fill="#D98C4A"/>
+            <rect x="30" y="18" width="1" height="1" fill="#D98C4A"/>
+            <rect x="31" y="18" width="1" height="1" fill="#D98C4A"/>
+            <rect x="32" y="18" width="1" height="1" fill="#D98C4A"/>
+            <rect x="33" y="18" width="1" height="1" fill="#D98C4A"/>
+            <rect x="34" y="18" width="1" height="1" fill="#D98C4A"/>
+            <rect x="35" y="18" width="1" height="1" fill="#D98C4A"/>
+            <rect x="36" y="18" width="1" height="1" fill="#D98C4A"/>
+            <rect x="25" y="19" width="1" height="1" fill="#D98C4A"/>
+            <rect x="26" y="19" width="1" height="1" fill="#D98C4A"/>
+            <rect x="27" y="19" width="1" height="1" fill="#D98C4A"/>
+            <rect x="28" y="19" width="1" height="1" fill="#D98C4A"/>
+            <rect x="29" y="19" width="1" height="1" fill="#D98C4A"/>
+            <rect x="30" y="19" width="1" height="1" fill="#D98C4A"/>
+            <rect x="31" y="19" width="1" height="1" fill="#D98C4A"/>
+            <rect x="32" y="19" width="1" height="1" fill="#D98C4A"/>
+            <rect x="33" y="19" width="1" height="1" fill="#D98C4A"/>
+            <rect x="34" y="19" width="1" height="1" fill="#D98C4A"/>
+            <rect x="35" y="19" width="1" height="1" fill="#D98C4A"/>
+            <rect x="36" y="19" width="1" height="1" fill="#D98C4A"/>
+            <rect x="37" y="19" width="1" height="1" fill="#D98C4A"/>
+            <rect x="24" y="20" width="1" height="1" fill="#D98C4A"/>
+            <rect x="25" y="20" width="1" height="1" fill="#D98C4A"/>
+            <rect x="26" y="20" width="1" height="1" fill="#D98C4A"/>
+            <rect x="27" y="20" width="1" height="1" fill="#D98C4A"/>
+            <rect x="28" y="20" width="1" height="1" fill="#D98C4A"/>
+            <rect x="29" y="20" width="1" height="1" fill="#D98C4A"/>
+            <rect x="30" y="20" width="1" height="1" fill="#D98C4A"/>
+            <rect x="31" y="20" width="1" height="1" fill="#D98C4A"/>
+            <rect x="32" y="20" width="1" height="1" fill="#D98C4A"/>
+            <rect x="33" y="20" width="1" height="1" fill="#D98C4A"/>
+            <rect x="34" y="20" width="1" height="1" fill="#D98C4A"/>
+            <rect x="35" y="20" width="1" height="1" fill="#D98C4A"/>
+            <rect x="36" y="20" width="1" height="1" fill="#D98C4A"/>
+            <rect x="37" y="20" width="1" height="1" fill="#D98C4A"/>
+            <rect x="38" y="20" width="1" height="1" fill="#D98C4A"/>
+            <rect x="24" y="21" width="1" height="1" fill="#D98C4A"/>
+            <rect x="25" y="21" width="1" height="1" fill="#D98C4A"/>
+            <rect x="26" y="21" width="1" height="1" fill="#D98C4A"/>
+            <rect x="27" y="21" width="1" height="1" fill="#D98C4A"/>
+            <rect x="28" y="21" width="1" height="1" fill="#D98C4A"/>
+            <rect x="29" y="21" width="1" height="1" fill="#D98C4A"/>
+            <rect x="30" y="21" width="1" height="1" fill="#D98C4A"/>
+            <rect x="31" y="21" width="1" height="1" fill="#D98C4A"/>
+            <rect x="32" y="21" width="1" height="1" fill="#D98C4A"/>
+            <rect x="33" y="21" width="1" height="1" fill="#D98C4A"/>
+            <rect x="34" y="21" width="1" height="1" fill="#D98C4A"/>
+            <rect x="35" y="21" width="1" height="1" fill="#D98C4A"/>
+            <rect x="36" y="21" width="1" height="1" fill="#D98C4A"/>
+            <rect x="37" y="21" width="1" height="1" fill="#D98C4A"/>
+            <rect x="38" y="21" width="1" height="1" fill="#D98C4A"/>
+            <rect x="25" y="22" width="1" height="1" fill="#D98C4A"/>
+            <rect x="26" y="22" width="1" height="1" fill="#D98C4A"/>
+            <rect x="27" y="22" width="1" height="1" fill="#D98C4A"/>
+            <rect x="28" y="22" width="1" height="1" fill="#D98C4A"/>
+            <rect x="29" y="22" width="1" height="1" fill="#D98C4A"/>
+            <rect x="30" y="22" width="1" height="1" fill="#D98C4A"/>
+            <rect x="31" y="22" width="1" height="1" fill="#D98C4A"/>
+            <rect x="32" y="22" width="1" height="1" fill="#D98C4A"/>
+            <rect x="33" y="22" width="1" height="1" fill="#D98C4A"/>
+            <rect x="34" y="22" width="1" height="1" fill="#D98C4A"/>
+            <rect x="35" y="22" width="1" height="1" fill="#D98C4A"/>
+            <rect x="36" y="22" width="1" height="1" fill="#D98C4A"/>
+            <rect x="37" y="22" width="1" height="1" fill="#D98C4A"/>
+            <rect x="26" y="23" width="1" height="1" fill="#D98C4A"/>
+            <rect x="27" y="23" width="1" height="1" fill="#D98C4A"/>
+            <rect x="28" y="23" width="1" height="1" fill="#D98C4A"/>
+            <rect x="29" y="23" width="1" height="1" fill="#D98C4A"/>
+            <rect x="30" y="23" width="1" height="1" fill="#D98C4A"/>
+            <rect x="31" y="23" width="1" height="1" fill="#D98C4A"/>
+            <rect x="32" y="23" width="1" height="1" fill="#D98C4A"/>
+            <rect x="33" y="23" width="1" height="1" fill="#D98C4A"/>
+            <rect x="34" y="23" width="1" height="1" fill="#D98C4A"/>
+            <rect x="35" y="23" width="1" height="1" fill="#D98C4A"/>
+            <rect x="36" y="23" width="1" height="1" fill="#D98C4A"/>
+      </svg>
+    <p>Freedom is a Choice</p>
+  </div>
+
+  <!-- ============================================================
+       NAV
+       ============================================================ -->
+  <header class="site">
+    <div class="wrap">
+      <a href="#top" class="brand">
+        <span class="prompt">root@siavash</span>:~$<span class="cursor"></span><span class="brand-command" id="brandCommand"></span>
+      </a>
+      <nav class="primary" id="primaryNav">
+        <a href="#about">About</a>
+        <a href="#summary">Summary</a>
+        <a href="#findings">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ============================================================
+       HERO
+       ============================================================ -->
+  <section class="hero" id="top">
+    <div class="wrap">
+
+      <div class="term">
+        <div class="term-bar">
+          <span class="term-dot"></span><span class="term-dot"></span><span class="term-dot"></span>
+          <span class="term-title">session.log</span>
+        </div>
+        <div class="term-body" id="typedTerm"></div>
+      </div>
+
+      <h1>Siavash Torkamannejad<br><span class="accent">Full Stack Web Developer</span></h1>
+      <p class="role">Freelance web developer with a background in hardware and network administration — currently building on the web, with the systems-level instincts of five years fixing hardware and two years running networks.</p>
+
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary">Initiate Contact</a>
+      </div>
+
+      <div class="hero-meta">
+        <div>
+          <div class="k">Experience</div>
+          <div class="v">Hardware (5y) · NetAdmin (2y)</div>
+        </div>
+        <div>
+          <div class="k">Focus</div>
+          <div class="v">Freelance Web Development</div>
+        </div>
+        <div>
+          <div class="k">Status</div>
+          <div class="v">Under Contract</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       ABOUT
+       ============================================================ -->
+  <section id="about">
+    <div class="wrap">
+      <div class="eyebrow reveal">01 — Executive Summary</div>
+      <div class="about-grid">
+        <div class="about-body reveal">
+          <p>Currently working as a freelance web developer. Before that, I spent five years as a hardware technician and two years as a network administrator — hands-on experience that shaped how I think about systems from the ground up.</p>
+        </div>
+        <div class="field-list reveal">
+          <div class="field"><span>Location</span><span>Tehran, Iran</span></div>
+          <div class="field"><span>Current role</span><span>Freelance Web Developer</span></div>
+          <div class="field"><span>Hardware Technician</span><span>5 years</span></div>
+          <div class="field"><span>Network Administrator</span><span>2 years</span></div>
+          <div class="field"><span>Languages</span><span>HTML, CSS, JavaScript, TypeScript, Python, Lua</span></div>
+          <div class="field"><span>Currently Learning</span><span>Decentralized Applications, Solidity, Smart Contracts</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PROFESSIONAL SUMMARY
+       ============================================================ -->
+  <section id="summary">
+    <div class="wrap">
+      <div class="eyebrow reveal">02 — Professional Summary</div>
+      <h2 class="reveal" style="font-size:28px; margin-bottom:24px;">Full Stack Web Developer</h2>
+
+      <div class="summary-body reveal">
+        <p>Full stack development, to me, means owning a product across the whole stack — from the interface a user touches to the systems it runs on — and understanding both sides well enough to make good tradeoffs, not just plug pieces together.</p>
+
+        <ul class="summary-list">
+          <li><strong>End-to-end ownership</strong> — building interfaces, logic, and the tooling that ties them together, from first prototype to a deployed, working product.</li>
+          <li><strong>Systems-level grounding</strong> — five years as a hardware technician and two years as a network administrator gave me a working understanding of the infrastructure code actually runs on.</li>
+          <li><strong>Modern web fundamentals</strong> — HTML, CSS, JavaScript, and TypeScript as the core toolkit, applied to both greenfield builds and existing systems.</li>
+          <li><strong>AI-augmented workflow</strong> — using prompt engineering and AI coding assistants to move faster, without skipping review, testing, or version control discipline.</li>
+          <li><strong>Real-world delivery</strong> — shipped self-assessment tools already in use (Tobacco Free Hospital Assessment, Healthy City Assessment), not just personal experiments.</li>
+        </ul>
+
+        <div class="summary-callout">
+          <span class="label">Core value proposition</span>
+          Able to take a project from idea to a working, deployed product without handing pieces off to other specialists — useful for teams and clients who need one person who can own the whole stack.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FINDINGS (SKILLS)
+       ============================================================ -->
+  <section id="findings">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div>
+          <div class="eyebrow">03 — Findings</div>
+          <h2>Skills, rated by proficiency</h2>
+        </div>
+        <p>Web Development with AI tools</p>
+      </div>
+
+      <div class="findings reveal">
+        <div class="finding">
+          <span class="sev sev-critical">Critical</span>
+          <span class="cat">Frontend Development</span>
+          <span class="desc">Building responsive, interactive interfaces with <span class="tool">HTML</span>, <span class="tool">CSS</span>, <span class="tool">JavaScript</span>, and <span class="tool">TypeScript</span>.</span>
+        </div>
+        <div class="finding">
+          <span class="sev sev-critical">Critical</span>
+          <span class="cat">AI-Assisted Development</span>
+          <span class="desc">Vibe coding and prompt engineering — directing AI coding assistants through iterative, structured prompting to ship working software fast.</span>
+        </div>
+        <div class="finding">
+          <span class="sev sev-high">High</span>
+          <span class="cat">Systems & Network Fundamentals</span>
+          <span class="desc">Five years as a hardware technician and two as a network administrator — infrastructure-aware development, not just surface-level code.</span>
+        </div>
+        <div class="finding">
+          <span class="sev sev-medium">Medium</span>
+          <span class="cat">Product Delivery</span>
+          <span class="desc">Taking a tool from first prototype to a working, deployed product used by real people — self-assessment apps shipped, not just demos.</span>
+        </div>
+        <div class="finding">
+          <span class="sev sev-low">Low</span>
+          <span class="cat">Blockchain & Smart Contracts</span>
+          <span class="desc">Currently learning <span class="tool">Solidity</span> and decentralized application development.</span>
+        </div>
+      </div>
+
+      <div class="findings-legend reveal">
+        <span class="item"><span class="dot" style="background:var(--crit)"></span> Critical — daily driver</span>
+        <span class="item"><span class="dot" style="background:var(--warn)"></span> High — solid working knowledge</span>
+        <span class="item"><span class="dot" style="background:var(--info)"></span> Medium — comfortable, still growing</span>
+        <span class="item"><span class="dot" style="background:var(--text-dim)"></span> Low — familiar, learning actively</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PROJECTS / ENGAGEMENT LOG
+       ============================================================ -->
+  <section id="projects">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div>
+          <div class="eyebrow">04 — Engagement Log</div>
+          <h2>Projects & write-ups</h2>
+        </div>
+        <p>Here are some of my recent projects summary</p>
+      </div>
+
+      <div class="log">
+        <div class="log-entry reveal">
+          <div class="log-head">
+            <span class="log-id mono">PROJ-2026-001</span>
+            <span class="log-status">Resolved</span>
+          </div>
+          <h3>Tobacco Free Hospital Assessment</h3>
+          <p>A single-file, Persian-language self-assessment tool for hospitals to score their tobacco-free compliance — 9 steps and 37 checklist items, each rated on a 0/1/2 scoring rubric with an interactive results gauge.</p>
+          <div class="tags">
+            <span class="tag">[Web]</span>
+            <span class="tag">[Persian / RTL]</span>
+            <span class="tag">[Self-Assessment Tool]</span>
+          </div>
+        </div>
+
+        <div class="log-entry reveal">
+          <div class="log-head">
+            <span class="log-id mono">PROJ-2026-002</span>
+            <span class="log-status">Resolved</span>
+          </div>
+          <h3>Healthy City Assessment</h3>
+          <p>[Description of the tool's scope — e.g. number of indicators, scoring rubric, and who uses it. Same self-assessment format as the hospital tool, adapted for a city-level checklist.]</p>
+          <div class="tags">
+            <span class="tag">[Web]</span>
+            <span class="tag">[Persian / RTL]</span>
+            <span class="tag">[Self-Assessment Tool]</span>
+          </div>
+        </div>
+
+        <div class="log-entry reveal">
+          <div class="log-head">
+            <span class="log-id mono">PROJ-2026-003</span>
+            <span class="log-status">Resolved</span>
+          </div>
+          <h3>Crypto Transaction Tracker</h3>
+          <p>A cross-network cryptocurrency transaction tracking tool — follows transactions across multiple blockchain networks.</p>
+          <div class="tags">
+            <span class="tag">[Web]</span>
+            <span class="tag">[Blockchain]</span>
+            <span class="tag">[Multi-Network]</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CONTACT
+       ============================================================ -->
+  <section id="contact">
+    <div class="wrap">
+      <div class="contact-panel reveal">
+        <div class="eyebrow" style="justify-content:center;">05 — Secure Channel</div>
+        <h2>Let's talk Dev</h2>
+        <p>[Open to full-time roles, freelance engagements, or just talking shop about a finding. Reach out through any channel below.]</p>
+
+        <div class="contact-actions">
+          <a href="mailto:siavashtnejad@gmail.com" class="btn btn-primary">Email Me</a>
+          <button type="button" class="btn btn-outline" id="donateToggle">Donate Polygon</button>
+        </div>
+
+        <div class="donate-panel" id="donatePanel" hidden>
+          <div class="donate-row">
+            <span class="donate-label">Network</span>
+            <span class="donate-value">Polygon</span>
+          </div>
+          <div class="donate-row">
+            <span class="donate-label">Wallet</span>
+            <span class="donate-value mono" id="donateWalletStatus">Not connected</span>
+          </div>
+          <div class="donate-controls">
+            <input type="number" id="donateAmount" class="donate-input" placeholder="Amount (POL)" min="0" step="0.01" value="1">
+            <button type="button" class="btn btn-primary" id="donateSend">Connect &amp; Send</button>
+          </div>
+          <p class="donate-note" id="donateNote">Requires the MetaMask browser extension.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer>
+    <div class="wrap">
+      <p>© <span id="year"></span> Siavash Torkamannejad. Built with intent, not a template.</p>
+      <p>Last scanned: <span id="lastScan"></span></p>
+    </div>
+  </footer>
+
+  <script>
+    // Year + fake "last scanned" timestamp for flavor
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('lastScan').textContent = new Date().toISOString().slice(0,16).replace('T',' ') + ' UTC';
+
+    // Mobile nav toggle
+    const navToggle = document.getElementById('navToggle');
+    const primaryNav = document.getElementById('primaryNav');
+    navToggle.addEventListener('click', () => {
+      const open = primaryNav.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', open);
+    });
+    primaryNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      primaryNav.classList.remove('open');
+      navToggle.setAttribute('aria-expanded', 'false');
+    }));
+
+    // Terminal boot sequence in hero
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const termEl = document.getElementById('typedTerm');
+    const bootLines = [
+      { text: '$ whoami', ok:false },
+      { text: 'Siavash Torkamannejad — full stack web developer', ok:true },
+      { text: '$ scanning experience...', ok:false },
+      { text: 'hardware (5y), network admin (2y), web dev (current)', ok:true },
+      { text: '$ status', ok:false },
+      { text: 'ready to contribute to exciting projects', ok:true },
+    ];
+
+    function renderStatic(){
+      termEl.innerHTML = bootLines.map(l =>
+        `<div class="line" style="opacity:1"><span class="${l.ok ? 'ok' : ''}">${l.ok ? '✓ ' : ''}${l.text}</span></div>`
+      ).join('');
+    }
+
+    function typeBoot(){
+      let html = '';
+      termEl.innerHTML = '';
+      let li = 0;
+
+      function nextLine(){
+        if(li >= bootLines.length){
+          termEl.querySelector('.line:last-child')?.insertAdjacentHTML('beforeend', '<span class="term-line-cursor"></span>');
+          return;
+        }
+        const line = bootLines[li];
+        const div = document.createElement('div');
+        div.className = 'line';
+        div.style.opacity = '1';
+        termEl.appendChild(div);
+        let ci = 0;
+        const prefix = line.ok ? '✓ ' : '';
+        const full = prefix + line.text;
+        const span = document.createElement('span');
+        if(line.ok) span.className = 'ok';
+        div.appendChild(span);
+
+        const typer = setInterval(() => {
+          span.textContent = full.slice(0, ci+1);
+          ci++;
+          if(ci >= full.length){
+            clearInterval(typer);
+            li++;
+            setTimeout(nextLine, 160);
+          }
+        }, 16);
+      }
+      nextLine();
+    }
+
+    if(reduceMotion){ renderStatic(); } else { typeBoot(); }
+
+    // Type the brand-bar command line
+    const brandEl = document.getElementById('brandCommand');
+    const brandText = ' Make that choice ... Now';
+    if(brandEl){
+      if(reduceMotion){
+        brandEl.textContent = brandText;
+      } else {
+        let bi = 0;
+        const brandTyper = setInterval(() => {
+          brandEl.textContent = brandText.slice(0, bi+1);
+          bi++;
+          if(bi >= brandText.length){ clearInterval(brandTyper); }
+        }, 55);
+      }
+    }
+
+    // Scroll reveal
+    const revealEls = document.querySelectorAll('.reveal');
+    if('IntersectionObserver' in window && !reduceMotion){
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if(entry.isIntersecting){
+            entry.target.classList.add('in');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+      revealEls.forEach(el => io.observe(el));
+    } else {
+      revealEls.forEach(el => el.classList.add('in'));
+    }
+  </script>
+
+  <script>
+    // ---- Donate Polygon (MetaMask) ----
+    // ⚠️ Set this to the wallet address that should receive donations.
+    const DONATE_ADDRESS = "0x0cb24153d55580209ef2b291c1721e5a0fe82555";
+
+    const POLYGON_CHAIN = {
+      chainId: '0x89', // 137
+      chainName: 'Polygon Mainnet',
+      nativeCurrency: { name: 'POL', symbol: 'POL', decimals: 18 },
+      rpcUrls: ['https://polygon-rpc.com/'],
+      blockExplorerUrls: ['https://polygonscan.com/']
+    };
+
+    const donateToggle  = document.getElementById('donateToggle');
+    const donatePanel   = document.getElementById('donatePanel');
+    const donateSend    = document.getElementById('donateSend');
+    const donateAmount  = document.getElementById('donateAmount');
+    const donateNote    = document.getElementById('donateNote');
+    const donateWallet  = document.getElementById('donateWalletStatus');
+
+    if (donateToggle) {
+      donateToggle.addEventListener('click', () => {
+        donatePanel.hidden = !donatePanel.hidden;
+      });
+    }
+
+    function shortAddr(addr){
+      return addr.slice(0, 6) + '…' + addr.slice(-4);
+    }
+
+    function setNote(msg, type){
+      donateNote.textContent = msg;
+      donateNote.className = 'donate-note' + (type ? ' ' + type : '');
+    }
+
+    async function ensurePolygon(){
+      try {
+        await window.ethereum.request({
+          method: 'wallet_switchEthereumChain',
+          params: [{ chainId: POLYGON_CHAIN.chainId }]
+        });
+      } catch (switchErr) {
+        // Chain not added to MetaMask yet — add it.
+        if (switchErr.code === 4902) {
+          await window.ethereum.request({
+            method: 'wallet_addEthereumChain',
+            params: [POLYGON_CHAIN]
+          });
+        } else {
+          throw switchErr;
+        }
+      }
+    }
+
+    if (donateSend) {
+      donateSend.addEventListener('click', async () => {
+        if (typeof window.ethereum === 'undefined') {
+          setNote('MetaMask not detected — install the browser extension first.', 'error');
+          return;
+        }
+        if (!DONATE_ADDRESS || DONATE_ADDRESS.startsWith('0xYOUR')) {
+          setNote('Donation address not configured yet.', 'error');
+          return;
+        }
+
+        const amount = parseFloat(donateAmount.value);
+        if (!amount || amount <= 0) {
+          setNote('Enter an amount greater than 0.', 'error');
+          return;
+        }
+
+        donateSend.disabled = true;
+        try {
+          setNote('Connecting wallet…');
+          const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+          const from = accounts[0];
+          donateWallet.textContent = shortAddr(from);
+
+          setNote('Confirm the Polygon network in MetaMask…');
+          await ensurePolygon();
+
+          // Convert POL amount to wei (hex), avoiding float precision issues.
+          const weiValue = BigInt(Math.round(amount * 1e9)) * BigInt(1e9);
+          const valueHex = '0x' + weiValue.toString(16);
+
+          setNote('Confirm the transaction in MetaMask…');
+          const txHash = await window.ethereum.request({
+            method: 'eth_sendTransaction',
+            params: [{ from, to: DONATE_ADDRESS, value: valueHex }]
+          });
+
+          setNote('Sent! Tx: ' + shortAddr(txHash), 'success');
+        } catch (err) {
+          console.error(err);
+          setNote(err.message ? err.message.slice(0, 80) : 'Transaction cancelled or failed.', 'error');
+        } finally {
+          donateSend.disabled = false;
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>";
 
     const POLYGON_CHAIN = {
       chainId: '0x89', // 137
