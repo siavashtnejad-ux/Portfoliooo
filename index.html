@@ -896,7 +896,7 @@
           <li><strong>Systems-level grounding</strong> — five years as a hardware technician and two years as a network administrator gave me a working understanding of the infrastructure code actually runs on.</li>
           <li><strong>Modern web fundamentals</strong> — HTML, CSS, JavaScript, and TypeScript as the core toolkit, applied to both greenfield builds and existing systems.</li>
           <li><strong>AI-augmented workflow</strong> — using prompt engineering and AI coding assistants to move faster, without skipping review, testing, or version control discipline.</li>
-          <li><strong>Real-world delivery</strong> — shipped self-assessment tools already in use (Tobacco Free Hospital Assessment, Healthy City Assessment), not just personal experiments.</li>
+          <li><strong>Real-world delivery</strong> — shipped tools already in use: public-health self-assessment apps (Tobacco Free Hospital, Tobacco-Free City with interactive map, Healthy City), a full-stack hospital staff management system, and an AI-assisted ticket automation workflow.</li>
         </ul>
 
         <div class="summary-callout">
@@ -942,6 +942,11 @@
           <span class="desc">Taking a tool from first prototype to a working, deployed product used by real people — self-assessment apps shipped, not just demos.</span>
         </div>
         <div class="finding">
+          <span class="sev sev-medium">Medium</span>
+          <span class="cat">Backend & Automation</span>
+          <span class="desc">Building APIs and services with <span class="tool">Node.js</span> and <span class="tool">Express</span>, and workflow automation with <span class="tool">n8n</span> — webhooks, conditional routing, and AI-model integrations.</span>
+        </div>
+        <div class="finding">
           <span class="sev sev-low">Low</span>
           <span class="cat">Blockchain & Smart Contracts</span>
           <span class="desc">Currently learning <span class="tool">Solidity</span> and decentralized application development.</span>
@@ -967,7 +972,7 @@
           <div class="eyebrow">04 — Engagement Log</div>
           <h2>Projects & write-ups</h2>
         </div>
-        <p>Here are some of my recent projects summary</p>
+        <p>A summary of recent projects — from public-health assessment tools to full-stack systems and AI automation.</p>
       </div>
 
       <div class="log">
@@ -991,11 +996,12 @@
             <span class="log-status">Resolved</span>
           </div>
           <h3>Healthy City Assessment</h3>
-          <p>[Description of the tool's scope — e.g. number of indicators, scoring rubric, and who uses it. Same self-assessment format as the hospital tool, adapted for a city-level checklist.]</p>
+          <p>A city-level assessment platform where each city can hold multiple assessments over time. Every submission records the city, evaluator, date, section-level scores, and a total score — and becomes immutable once submitted, so results can't be quietly edited later. Submissions are persisted to Google Sheets as a lightweight backend.</p>
           <div class="tags">
             <span class="tag">[Web]</span>
             <span class="tag">[Persian / RTL]</span>
             <span class="tag">[Self-Assessment Tool]</span>
+            <span class="tag">[Google Sheets Backend]</span>
           </div>
         </div>
 
@@ -1004,12 +1010,60 @@
             <span class="log-id mono">PROJ-2026-003</span>
             <span class="log-status">Resolved</span>
           </div>
-          <h3>Crypto Transaction Tracker</h3>
-          <p>A cross-network cryptocurrency transaction tracking tool — follows transactions across multiple blockchain networks.</p>
+          <h3>Tobacco-Free City Assessment — Interactive Map</h3>
+          <p>A 35-question interactive self-assessment for tobacco-free city compliance, extended with an interactive map view. Built as a modular JavaScript app (separate data, app logic, and UI layers) and published as a public repository on GitHub.</p>
+          <div class="tags">
+            <span class="tag">[Web]</span>
+            <span class="tag">[Persian / RTL]</span>
+            <span class="tag">[Interactive Map]</span>
+            <span class="tag">[Open Source]</span>
+          </div>
+          <div class="log-links">
+            <a href="https://github.com/siavashtnejad-ux/Tobacco_Free_City_with_Interactive_Map" target="_blank" rel="noopener">View repository</a>
+          </div>
+        </div>
+
+        <div class="log-entry reveal">
+          <div class="log-head">
+            <span class="log-id mono">PROJ-2026-004</span>
+            <span class="log-status">Resolved</span>
+          </div>
+          <h3>Hospital Staff Management System</h3>
+          <p>A full-stack staff registration and management system for hospitals — login, dashboard, and full CRUD for staff records, built with a Node.js backend (Express, controller/database layers) and deployed to a local server after untangling an nginx/Apache port conflict.</p>
+          <div class="tags">
+            <span class="tag">[Full Stack]</span>
+            <span class="tag">[Node.js]</span>
+            <span class="tag">[CRUD + Auth]</span>
+            <span class="tag">[Deployment]</span>
+          </div>
+        </div>
+
+        <div class="log-entry reveal">
+          <div class="log-head">
+            <span class="log-id mono">PROJ-2026-005</span>
+            <span class="log-status">Resolved</span>
+          </div>
+          <h3>AI CRM Ticket Automation</h3>
+          <p>A self-hosted n8n workflow that receives support tickets over a webhook, classifies them with an AI model, routes them through conditional logic, and writes results back to a data table before responding — an end-to-end AI-assisted ticket triage pipeline.</p>
+          <div class="tags">
+            <span class="tag">[Automation]</span>
+            <span class="tag">[n8n]</span>
+            <span class="tag">[AI Integration]</span>
+            <span class="tag">[Webhook API]</span>
+          </div>
+        </div>
+
+        <div class="log-entry reveal">
+          <div class="log-head">
+            <span class="log-id mono">PROJ-2026-006</span>
+            <span class="log-status">Resolved</span>
+          </div>
+          <h3>Blockchain Transaction Tracker</h3>
+          <p>A single-page web app that takes a transaction ID and returns its live status on the Ethereum network via the Etherscan API — verifying sender, receiver, amount, and confirmation state.</p>
           <div class="tags">
             <span class="tag">[Web]</span>
             <span class="tag">[Blockchain]</span>
-            <span class="tag">[Multi-Network]</span>
+            <span class="tag">[Etherscan API]</span>
           </div>
         </div>
       </div>
@@ -1168,7 +1222,8 @@
   <script>
     // ---- Donate Polygon (MetaMask) ----
     // ⚠️ Set this to the wallet address that should receive donations.
-const DONATE_ADDRESS = "0x0cb24153d55580209ef2b291c1721e5a0fe82555";
+    const DONATE_ADDRESS = "0xYOUR_POLYGON_WALLET_ADDRESS_HERE";
+
     const POLYGON_CHAIN = {
       chainId: '0x89', // 137
       chainName: 'Polygon Mainnet',
