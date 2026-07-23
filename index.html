@@ -485,47 +485,6 @@
 
   .contact-actions{ display:flex; gap:14px; justify-content:center; flex-wrap:wrap; margin-bottom:36px; }
 
-  .donate-panel{
-    max-width:380px;
-    margin:0 auto 8px;
-    border:1px solid var(--border);
-    border-radius:6px;
-    padding:18px 20px;
-    background:var(--bg-alt);
-    text-align:left;
-  }
-  .donate-row{
-    display:flex; justify-content:space-between; align-items:center;
-    padding:7px 0;
-    border-bottom:1px solid var(--border-soft);
-    font-size:13px;
-  }
-  .donate-row:last-of-type{ border-bottom:none; }
-  .donate-label{
-    font-family:var(--mono); font-size:10.5px; letter-spacing:0.06em;
-    text-transform:uppercase; color:var(--text-faint);
-  }
-  .donate-value{ color:var(--text); font-size:13px; }
-  .donate-value.mono{ font-family:var(--mono); font-size:12px; }
-  .donate-controls{ display:flex; gap:10px; margin-top:14px; }
-  .donate-input{
-    flex:1; min-width:0;
-    background:var(--surface); border:1px solid var(--border); border-radius:4px;
-    color:var(--text); font-family:var(--mono); font-size:13px;
-    padding:11px 12px;
-  }
-  .donate-input:focus{ outline:2px solid var(--accent); outline-offset:1px; }
-  .donate-note{
-    font-family:var(--mono); font-size:10.5px; color:var(--text-faint);
-    margin-top:12px; text-align:center;
-  }
-  .donate-note.error{ color:var(--crit); }
-  .donate-note.success{ color:var(--accent); }
-
-  @media (max-width:480px){
-    .donate-controls{ flex-direction:column; }
-  }
-
   .channels{ display:flex; gap:26px; justify-content:center; flex-wrap:wrap; }
   .channels a{
     font-family:var(--mono); font-size:12.5px; color:var(--text-dim);
@@ -1082,23 +1041,6 @@
 
         <div class="contact-actions">
           <a href="mailto:siavashtnejad@gmail.com" class="btn btn-primary">Email Me</a>
-          <button type="button" class="btn btn-outline" id="donateToggle">Donate Polygon</button>
-        </div>
-
-        <div class="donate-panel" id="donatePanel" hidden>
-          <div class="donate-row">
-            <span class="donate-label">Network</span>
-            <span class="donate-value">Polygon</span>
-          </div>
-          <div class="donate-row">
-            <span class="donate-label">Wallet</span>
-            <span class="donate-value mono" id="donateWalletStatus">Not connected</span>
-          </div>
-          <div class="donate-controls">
-            <input type="number" id="donateAmount" class="donate-input" placeholder="Amount (POL)" min="0" step="0.01" value="1">
-            <button type="button" class="btn btn-primary" id="donateSend">Connect &amp; Send</button>
-          </div>
-          <p class="donate-note" id="donateNote">Requires the MetaMask browser extension.</p>
         </div>
       </div>
     </div>
@@ -1216,108 +1158,6 @@
       revealEls.forEach(el => io.observe(el));
     } else {
       revealEls.forEach(el => el.classList.add('in'));
-    }
-  </script>
-
-  <script>
-    // ---- Donate Polygon (MetaMask) ----
-    // ⚠️ Set this to the wallet address that should receive donations.
-    const DONATE_ADDRESS = "0xYOUR_POLYGON_WALLET_ADDRESS_HERE";
-
-    const POLYGON_CHAIN = {
-      chainId: '0x89', // 137
-      chainName: 'Polygon Mainnet',
-      nativeCurrency: { name: 'POL', symbol: 'POL', decimals: 18 },
-      rpcUrls: ['https://polygon-rpc.com/'],
-      blockExplorerUrls: ['https://polygonscan.com/']
-    };
-
-    const donateToggle  = document.getElementById('donateToggle');
-    const donatePanel   = document.getElementById('donatePanel');
-    const donateSend    = document.getElementById('donateSend');
-    const donateAmount  = document.getElementById('donateAmount');
-    const donateNote    = document.getElementById('donateNote');
-    const donateWallet  = document.getElementById('donateWalletStatus');
-
-    if (donateToggle) {
-      donateToggle.addEventListener('click', () => {
-        donatePanel.hidden = !donatePanel.hidden;
-      });
-    }
-
-    function shortAddr(addr){
-      return addr.slice(0, 6) + '…' + addr.slice(-4);
-    }
-
-    function setNote(msg, type){
-      donateNote.textContent = msg;
-      donateNote.className = 'donate-note' + (type ? ' ' + type : '');
-    }
-
-    async function ensurePolygon(){
-      try {
-        await window.ethereum.request({
-          method: 'wallet_switchEthereumChain',
-          params: [{ chainId: POLYGON_CHAIN.chainId }]
-        });
-      } catch (switchErr) {
-        // Chain not added to MetaMask yet — add it.
-        if (switchErr.code === 4902) {
-          await window.ethereum.request({
-            method: 'wallet_addEthereumChain',
-            params: [POLYGON_CHAIN]
-          });
-        } else {
-          throw switchErr;
-        }
-      }
-    }
-
-    if (donateSend) {
-      donateSend.addEventListener('click', async () => {
-        if (typeof window.ethereum === 'undefined') {
-          setNote('MetaMask not detected — install the browser extension first.', 'error');
-          return;
-        }
-        if (!DONATE_ADDRESS || DONATE_ADDRESS.startsWith('0xYOUR')) {
-          setNote('Donation address not configured yet.', 'error');
-          return;
-        }
-
-        const amount = parseFloat(donateAmount.value);
-        if (!amount || amount <= 0) {
-          setNote('Enter an amount greater than 0.', 'error');
-          return;
-        }
-
-        donateSend.disabled = true;
-        try {
-          setNote('Connecting wallet…');
-          const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
-          const from = accounts[0];
-          donateWallet.textContent = shortAddr(from);
-
-          setNote('Confirm the Polygon network in MetaMask…');
-          await ensurePolygon();
-
-          // Convert POL amount to wei (hex), avoiding float precision issues.
-          const weiValue = BigInt(Math.round(amount * 1e9)) * BigInt(1e9);
-          const valueHex = '0x' + weiValue.toString(16);
-
-          setNote('Confirm the transaction in MetaMask…');
-          const txHash = await window.ethereum.request({
-            method: 'eth_sendTransaction',
-            params: [{ from, to: DONATE_ADDRESS, value: valueHex }]
-          });
-
-          setNote('Sent! Tx: ' + shortAddr(txHash), 'success');
-        } catch (err) {
-          console.error(err);
-          setNote(err.message ? err.message.slice(0, 80) : 'Transaction cancelled or failed.', 'error');
-        } finally {
-          donateSend.disabled = false;
-        }
-      });
     }
   </script>
 
